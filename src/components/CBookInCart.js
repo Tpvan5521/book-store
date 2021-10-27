@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 // import img from 'assets/img/bookbanner.jpg'
 import Rate from 'rc-rate';
+import { useState } from 'react';
 
 const useStyles = createUseStyles({
     bgGradientOrange: {
@@ -20,7 +21,7 @@ const useStyles = createUseStyles({
     }
 })
 
-export default function CBookCard(props) {
+export default function CBookInCart(props) {
     const {
         name,
         author,
@@ -29,12 +30,14 @@ export default function CBookCard(props) {
         image,
         price
     } = props
+
     const classes = useStyles()
+    const [amount, setAmount] = useState(1)
 
     return (
-        <div className="shadow bg-white w-full">
+        <div className="w-full">
             <div className="flex">
-                <div className={`shadow -mt-6 mb-6 ml-8`} style={{ width: 160, height: 220 }}>
+                <div style={{ width: 160, height: 220 }}>
                     <img src={image} alt="book_photo" className={classes.img} />
                 </div>
                 <div className={`${classes.content} p-4`}>
@@ -50,17 +53,21 @@ export default function CBookCard(props) {
                     </div>
                     <div className={`${classes.textTwoLines} my-2`}>{description}</div>
                     <div>
-                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 bg-blue-400 text-white">Add to cart</button>
-                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 bg-white text-blue-400">View</button>
+                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-red-400 bg-red-400 text-white">Remove from cart</button>
+                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 bg-blue-400 text-white">Buy</button>
+                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 text-blue-400">View</button>
                     </div>
                 </div>
             </div>
-            <div style={{ borderTop: '1px solid #E5E7EB' }}>
-                <ul className="list-none px-2 m-0 text-gray-400">
-                    <li className="float-left p-1">views: 1000+</li>
-                    <li className="float-left p-1">comments: 12</li>
-                </ul>
-            </div>
+            <ul className="list-none px-2 m-0 float-right">
+                <li className="p-1">
+                    <span>Amount: </span>
+                    <button className="bg-gray-800 text-white font-bold w-6 h-6" onClick={() => setAmount(amount + 1)}>+</button>
+                    <span className="px-2">{amount}</span>
+                    <button className="bg-red-400 text-white font-bold w-6 h-6" onClick={() => { amount > 1 && setAmount(amount - 1) }}>-</button>
+                </li>
+                <li className="p-1">Total: <span className="text-red-500 font-bold">${price * amount}</span></li>
+            </ul>
         </div>
     )
 }

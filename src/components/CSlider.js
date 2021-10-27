@@ -1,17 +1,22 @@
 import Flickity from "react-flickity-component"
 import "flickity/dist/flickity.min.css"
 import { createUseStyles } from 'react-jss'
-import img from 'assets/img/bookbanner.jpg'
+import bookbanner from 'assets/img/bookbanner.jpg'
+import bookslide1 from 'assets/img/bookslide1.PNG'
+import bookslide2 from 'assets/img/bookslide2.PNG'
+import bookslide3 from 'assets/img/bookslide3.PNG'
 
 const useStyles = createUseStyles({
     carouselCell: {
-        height: 500,
+        height: 350
         // '& img': {
         //     width: '100%'
         // }
     },
-    bgGradientOrange: {
-        backgroundImage: 'linear-gradient(120deg, #f6d365 0%, #fda085 100%)'
+    img: {
+        objectFit: 'cover',
+        height: '100%',
+        width: '100%'
     }
 })
 
@@ -37,17 +42,17 @@ export default function CSlider() {
                         disableImagesLoaded={false}
                         static={false}
                     >
-                        <div className={`${classes.carouselCell} ${classes.bgGradientOrange} w-4/6 mr-2 rounded-lg`}>
-                            {/* <img src={img} alt="banner" /> */}
+                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
+                            <img src={bookbanner} alt="banner" className={classes.img} />
                         </div>
-                        <div className={`${classes.carouselCell} ${classes.bgGradientOrange} w-4/6 mr-2 rounded-lg`}>
-                            {/* <img src={img} alt="banner" /> */}
+                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
+                            <img src={bookslide1} alt="banner" className={classes.img} />
                         </div>
-                        <div className={`${classes.carouselCell} ${classes.bgGradientOrange} w-4/6 mr-2 rounded-lg`}>
-                            {/* <img src={img} alt="banner" /> */}
+                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
+                            <img src={bookslide2} alt="banner" className={classes.img} />
                         </div>
-                        <div className={`${classes.carouselCell} ${classes.bgGradientOrange} w-4/6 mr-2 rounded-lg`}>
-                            {/* <img src={img} alt="banner" /> */}
+                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
+                            <img src={bookslide3} alt="banner" className={classes.img} />
                         </div>
                     </Flickity>
                 </div>

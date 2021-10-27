@@ -3,7 +3,7 @@ import CFooterList from './footer/CFooterList'
 
 const useStyles = createUseStyles({
     footer: {
-        background: "#ddb892"
+        borderTop: '1px solid #D1D5DB'
     }
 })
 
@@ -11,7 +11,7 @@ export default function Footer() {
     const classes = useStyles()
     return (
         <>
-            <div className={`w-full ${classes.footer}`}>
+            <div className={`w-full bg-gray-300 ${classes.footer}`}>
                 <div className="container m-auto p-4">
                     <div className="my-8 flex justify-between">
                         <CFooterList title="Author" items={["Christophe", "John Doe", "Elizabeth Gilbert"]} />

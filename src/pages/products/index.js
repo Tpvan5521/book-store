@@ -5,6 +5,7 @@ import CBestSeller from "components/CBestSeller";
 import CSaleOff from "components/CSaleOff"
 import { createUseStyles } from 'react-jss'
 import { BsArrowDownCircle } from 'react-icons/bs'
+import srcParisInTheRain from 'assets/img/paris_in_the_rain.png'
 
 const useStyles = createUseStyles({
     rectangle: {
@@ -27,10 +28,10 @@ export default function HomePage() {
                         <div style={{ width: 280 }}>
                             <div className="py-4 text-lg font-semibold">Best sellers</div>
                             <ul className="list-none m-0 bg-white shadow rounded pt-4">
-                                <CBestSeller name="Paris in the rain" author="Christophe" image="image" />
-                                <CBestSeller name="Paris in the rain" author="Christophe" image="image" />
-                                <CBestSeller name="Paris in the rain" author="Christophe" image="image" />
-                                <CBestSeller name="Paris in the rain" author="Christophe" image="image" />
+                                <CBestSeller name="Paris in the rain" author="Christophe" image={srcParisInTheRain} />
+                                <CBestSeller name="Paris in the rain" author="Christophe" image={srcParisInTheRain} />
+                                <CBestSeller name="Paris in the rain" author="Christophe" image={srcParisInTheRain} />
+                                <CBestSeller name="Paris in the rain" author="Christophe" image={srcParisInTheRain} />
                                 <div className="flex justify-center">
                                     <button className="mt-3 py-2 w-3/5 flex justify-center items-center text-gray-700" style={{ borderTop: '1px solid #D1D5DB' }}>
                                         <span className="text-sm text-gray-400">Load more</span> &nbsp; <BsArrowDownCircle />
@@ -44,7 +45,7 @@ export default function HomePage() {
                                 <div className="font-semibold flex">
                                     <div className="flex-1">
                                     </div>
-                                    <div className="w-8 h-12 bg-red-600 text-white -mt-6 mr-2">
+                                    <div className="w-8 h-12 bg-red-400 text-white -mt-6 mr-2">
                                         <div className="w-8 h-8 flex items-center justify-center text-xs">-50%</div>
                                         <div className={classes.rectangle}></div>
                                     </div>
@@ -67,7 +68,7 @@ export default function HomePage() {
                                 <div className="font-semibold flex">
                                     <div className="flex-1">
                                     </div>
-                                    <div className="w-8 h-12 bg-red-600 text-white -mt-6 mr-2">
+                                    <div className="w-8 h-12 bg-red-400 text-white -mt-6 mr-2">
                                         <div className="w-8 h-8 flex items-center justify-center text-xs">-25%</div>
                                         <div className={classes.rectangle}></div>
                                     </div>
@@ -99,14 +100,14 @@ export default function HomePage() {
                             </ul>
                         </div>
                         <div className="grid grid-cols-2 gap-x-10 gap-y-20 mt-20 mb-8">
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
-                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
+                            <CBookCard name="Paris in the rain" author="Christophe" rating={4} image={srcParisInTheRain} price={48} />
                         </div>
                     </div>
                 </div>
