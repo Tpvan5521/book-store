@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import CPrivateRoute from "./private-route/PrivateRoute"
-import CLoading from "components/Loading"
+import CLoading from "components/CLoading"
 
 const LoginPage = React.lazy(() => import("pages/login"))
 const PageNotFound = React.lazy(() => import("pages/404"))

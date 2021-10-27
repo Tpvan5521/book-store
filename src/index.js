@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './tailwind.css';
+import 'rc-rate/assets/index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
