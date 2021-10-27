@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss'
+import CFooterList from './footer/CFooterList'
 
 const useStyles = createUseStyles({
     footer: {
@@ -13,30 +14,9 @@ export default function Footer() {
             <div className={`w-full ${classes.footer}`}>
                 <div className="container m-auto p-4">
                     <div className="my-8 flex justify-between">
-                        <ul className="list-none p-0 m-0">
-                            <li className="text-lg font-semibold">List name</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                        <ul className="list-none p-0 m-0">
-                            <li className="text-lg font-semibold">List name</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                        <ul className="list-none p-0 m-0">
-                            <li className="text-lg font-semibold">List name</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
-                        <ul className="list-none p-0 m-0">
-                            <li className="text-lg font-semibold">List name</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                            <li>Item</li>
-                        </ul>
+                        <CFooterList title="Author" items={["Christophe", "John Doe", "Elizabeth Gilbert"]} />
+                        <CFooterList title="Genre" items={["Business", "Science", "Philosophy", "Novel", "Comic"]} />
+                        <CFooterList title="Contact Us" items={[""]} />
                     </div>
                 </div>
             </div>

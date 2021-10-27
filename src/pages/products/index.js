@@ -86,7 +86,7 @@ export default function HomePage() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 ml-12">
                         <div className="flex justify-between" style={{ borderBottom: '1px solid #D1D5DB' }}>
                             <div className="float-left p-4 text-lg font-semibold">Popular by Genre</div>
                             <ul className="list-none p-0 m-0 flex items-center justify-between">
@@ -98,7 +98,7 @@ export default function HomePage() {
                                 <li className="float-left p-4">Comic</li>
                             </ul>
                         </div>
-                        <div className="grid grid-cols-2 gap-x-10 gap-y-16 mt-20 mb-8">
+                        <div className="grid grid-cols-2 gap-x-10 gap-y-20 mt-20 mb-8">
                             <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
                             <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
                             <CBookCard name="Paris in the rain" author="Christophe" rating={4} image="img" price={48} />
