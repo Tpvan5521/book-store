@@ -1,4 +1,4 @@
-import CLayout from "../../components/Layout";
+import CLayout from "components/Layout";
 
 export default function CartPage() {
     return (

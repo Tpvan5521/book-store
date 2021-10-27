@@ -6,7 +6,7 @@ export default function CLayout({ children }) {
         <div className="w-full min-h-full flex flex-col">
             <CHeader />
             <div className="flex-1">
-                <div className="container">
+                <div className="container m-auto">
                     {children}
                 </div>
             </div>

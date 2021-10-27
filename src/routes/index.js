@@ -12,7 +12,8 @@ const CartPage = React.lazy(() => import('pages/cart'))
 const ROUTES = [
     {
         path: "/",
-        component: HomePage
+        component: HomePage,
+        exact: true
     },
     {
         path: "/product/:productID",
@@ -37,8 +38,8 @@ export default function CMainRouter() {
         <Router>
             <Suspense fallback={<CLoading />}>
                 <Switch>
-                    {ROUTES.map(({ path, component: Component, noExact, ...rest }) => {
-                        return <Route path={path} component={Component} key={path} {...rest} />
+                    {ROUTES.map(({ path, component: Component, exact, ...rest }) => {
+                        return <Route path={path} component={Component} key={path} exact={exact ? exact : false} {...rest} />
                     })}
                 </Switch>
             </Suspense>
