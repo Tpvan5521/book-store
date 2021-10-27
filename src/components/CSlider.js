@@ -5,7 +5,7 @@ import img from 'assets/img/bookbanner.jpg'
 
 const useStyles = createUseStyles({
     carouselCell: {
-        height: 400,
+        height: 500,
         // '& img': {
         //     width: '100%'
         // }
