@@ -1,22 +1,20 @@
 import Flickity from "react-flickity-component"
 import "flickity/dist/flickity.min.css"
 import { createUseStyles } from 'react-jss'
-import bookbanner from 'assets/img/bookbanner.jpg'
-import bookslide1 from 'assets/img/bookslide1.PNG'
-import bookslide2 from 'assets/img/bookslide2.PNG'
-import bookslide3 from 'assets/img/bookslide3.PNG'
+import CBookBanner from "./CBookBanner"
+import srcImg from 'assets/img/book.jpg'
 
 const useStyles = createUseStyles({
     carouselCell: {
-        height: 350
+        height: 520,
         // '& img': {
         //     width: '100%'
         // }
     },
     img: {
         objectFit: 'cover',
-        height: '100%',
-        width: '100%'
+        // height: '100%',
+        // width: '100%'
     }
 })
 
@@ -33,7 +31,7 @@ export default function CSlider() {
 
     return (
         <div className="w-full flex items-center justify-center">
-            <div className="container m-auto mt-20">
+            <div className="container m-auto mt-16">
                 <div className="w-full p-4 rounded-lg">
                     <Flickity
                         className={"carousel"}
@@ -42,17 +40,20 @@ export default function CSlider() {
                         disableImagesLoaded={false}
                         static={false}
                     >
-                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
+                        {/* <div className={`${classes.carouselCell} w-1/2 mr-2 rounded-lg`}>
                             <img src={bookbanner} alt="banner" className={classes.img} />
+                        </div> */}
+                        <div className={`${classes.carouselCell} w-1/2 mr-1 rounded-lg flex items-center`}>
+                            <CBookBanner name="Big Magic" author="Elizabeth Gilbert" rating={4} image={srcImg} price={48} />
                         </div>
-                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
-                            <img src={bookslide1} alt="banner" className={classes.img} />
+                        <div className={`${classes.carouselCell} w-1/2 mr-1 rounded-lg flex items-center`}>
+                            <CBookBanner name="Big Magic" author="Elizabeth Gilbert" rating={4} image={srcImg} price={48} />
                         </div>
-                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
-                            <img src={bookslide2} alt="banner" className={classes.img} />
+                        <div className={`${classes.carouselCell} w-1/2 mr-1 rounded-lg flex items-center`}>
+                            <CBookBanner name="Big Magic" author="Elizabeth Gilbert" rating={4} image={srcImg} price={48} />
                         </div>
-                        <div className={`${classes.carouselCell} w-4/6 mr-2 rounded-lg`}>
-                            <img src={bookslide3} alt="banner" className={classes.img} />
+                        <div className={`${classes.carouselCell} w-1/2 mr-1 rounded-lg flex items-center`}>
+                            <CBookBanner name="Big Magic" author="Elizabeth Gilbert" rating={4} image={srcImg} price={48} />
                         </div>
                     </Flickity>
                 </div>

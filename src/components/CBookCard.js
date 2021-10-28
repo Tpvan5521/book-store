@@ -50,8 +50,8 @@ export default function CBookCard(props) {
                     </div>
                     <div className={`${classes.textTwoLines} my-2`}>{description}</div>
                     <div>
-                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 bg-blue-400 text-white">Add to cart</button>
-                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-blue-400 bg-white text-blue-400">View</button>
+                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-red-400 bg-red-400 text-white">Add to cart</button>
+                        <button className="px-2 py-1 mr-2 rounded border-solid border-2 border-red-400 bg-white text-red-400">View</button>
                     </div>
                 </div>
             </div>
